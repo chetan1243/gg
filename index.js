@@ -1,7 +1,7 @@
 // https://discordapp.com/oauth2/authorize?client_id=479944525943537665&scope=bot&permissions=268528647
 
 const Discord = require('discord.js');
-const auth = require("./auth.json");
+//const auth = require("./auth.json");
 let applicationQuestions = require("./application-questions.js");
 
 const client = new Discord.Client();
@@ -183,4 +183,4 @@ client.on('message', msg => {
 	}
 });
 
-client.login(auth.token);
+client.login(process.env.TOKEN);
